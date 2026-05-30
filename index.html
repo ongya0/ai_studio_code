@@ -1,924 +1,924 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>달콤공방 - 프리미엄 수제 쿠키 전문점!!</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- 백앤드/폰트 연동 (Gowun Batang & Inter) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind 전역 테마 커스터마이징 및 애니메이션 스타일 -->
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #FDFBF7;
-      color: #4A3728;
-      scroll-behavior: smooth;
-    }
-    .font-serif {
-      font-family: 'Gowun Batang', serif;
-    }
-    ::selection {
-      background-color: #F0E6D6;
-      color: #4A3728;
-    }
-    /* Simple accordion smooth transition helper */
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    }
-    .faq-answer.open {
-      max-height: 300px;
-    }
-  </style>
-</head>
-<body class="min-h-screen antialiased relative overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>달콤공방 | 프리미엄 수제 쿠키 & 디저트 선물상자</title>
+    <meta name="title" content="달콤공방 | 프리미엄 수제 쿠키 & 디저트 선물상자" />
+    <meta name="description" content="매일 아침 프랑스산 천연 발효 버터와 유기농 밀가루로 정성스럽게 구워내는 달콤공방의 수제 쿠키. 나만의 크래프트 선물상자를 실시간 구성하고 간편하게 주문해보세요." />
+    <meta name="theme-color" content="#8B4513" />
 
-  <!-- 상단 분위기 배경 그라데이션 -->
-  <div class="absolute top-0 left-0 right-0 h-[600px] bg-gradient-to-b from-[#F9F3EB] to-transparent pointer-events-none -z-10"></div>
+    <!-- Open Graph / KakaoTalk Preview Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ais-pre-ueoc2ehnuc2ojoodt54pdd-673590926637.asia-east1.run.app" />
+    <meta property="og:title" content="달콤공방 | 프리미엄 프랑스식 수제 쿠키" />
+    <meta property="og:description" content="매일 아침 정성껏 구워내는 촉촉하고 달콤한 행복 🍪 나만의 선물 상자를 담아 카카오톡으로 간편하게 주문해 보세요." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1200&auto=format&fit=crop" />
+    <meta property="og:site_name" content="달콤공방" />
+    <meta property="og:locale" content="ko_KR" />
 
-  <!-- 현대적인 헤더 네비게이션 -->
-  <header id="header" class="sticky top-0 z-40 backdrop-blur-md bg-[#FDFBF7]/90 border-b border-[#F0E6D6] px-4 py-3 sm:px-8">
-    <div class="max-w-6xl mx-auto flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2 group">
-        <div class="w-10 h-10 rounded-full bg-[#8B4513] flex items-center justify-center text-white transition-transform group-hover:rotate-12 duration-300 shadow-md">
-          <!-- Cookie SVG Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
-        </div>
-        <div>
-          <span class="font-serif font-bold text-lg sm:text-xl tracking-tight text-[#4A3728] block leading-tight">달콤공방</span>
-          <span class="text-[10px] sm:text-xs text-[#8B4513] font-medium tracking-widest uppercase font-serif block">Sweets Atelier</span>
-        </div>
-      </a>
-      
-      <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-[#4A3728]/80">
-        <a href="#story" class="hover:text-[#8B4513] transition-colors">공방 이야기</a>
-        <a href="#products" class="hover:text-[#8B4513] transition-colors">대표 쿠키들</a>
-        <a href="#giftbox" class="hover:text-[#8B4513] transition-colors">나만의 선물상자</a>
-        <a href="#faq" class="hover:text-[#8B4513] transition-colors">자주 묻는 질문</a>
-      </nav>
+    <!-- Twitter Card Preview -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="달콤공방 | 프리미엄 프랑스식 수제 쿠키" />
+    <meta name="twitter:description" content="매일 아침 정성껏 구워내는 촉촉하고 달콤한 행복 🍪 나만의 선물 상자를 담아 카카오톡으로 간편하게 주문해 보세요." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1200&auto=format&fit=crop" />
 
-      <div class="flex items-center gap-3">
-        <a 
-          href="https://pf.kakao.com" 
-          target="_blank" 
-          rel="noreferrer"
-          class="px-4 py-2 bg-[#FEE500] hover:bg-[#FDD800] text-[#191919] font-medium text-xs sm:text-sm rounded-full transition-all duration-300 shadow-sm flex items-center gap-1.5 border border-[#E9D100]"
-        >
-          <!-- Message Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          <span class="hidden sm:inline">카카오톡 채널</span>
-          <span class="inline sm:hidden">채널</span>
-        </a>
-      </div>
-    </div>
-  </header>
+    <!-- Tailwinds Play CDN & Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icon Renderer Service -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Hero Section -->
-  <section id="hero" class="relative px-6 pt-8 pb-16 sm:py-20 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
-    <div class="flex-1 text-center lg:text-left">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[#8B4513] text-xs font-semibold mb-6">
-        <span class="text-amber-500">✦</span>
-        <span>프리미엄 프랑스식 고메 수제 쿠키</span>
-      </div>
-      
-      <h1 class="font-serif text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-[#4A3728] leading-[1.25] mb-6">
-        매일 아침 구워내는<br />
-        따뜻하고 <span class="text-[#8B4513] underline decoration-[#F0E6D6] decoration-8 underline-offset-4">달콤한 행복</span>
-      </h1>
-      
-      <p class="text-base sm:text-lg text-[#4A3728]/80 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8 font-light">
-        엄선된 유기농 밀가루와 순수 천연 발효 버터를 사용하여 만드는 달콤공방 수제쿠키는 한 입 베어 무는 순간 지친 하루에 깊고 따사로운 행복을 가득 채워 드립니다.
-      </p>
+    <script>
+      // Tailwind Theme Extender Configuration
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/css">
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-[#FDFBF7] text-[#4A3728] font-sans antialiased selection:bg-[#F0E6D6] selection:text-[#4A3728] relative overflow-x-hidden">
+    
+    <!-- Dynamic Background element -->
+    <div class="absolute top-0 left-0 right-0 h-[600px] bg-gradient-to-b from-[#F9F3EB] to-transparent pointer-events-none -z-10"></div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-        <a 
-          href="#products"
-          class="w-full sm:w-auto px-8 py-3.5 bg-[#8B4513] hover:bg-[#6F4E37] text-white font-medium text-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-center flex items-center justify-center gap-2 group"
-        >
-          <span>쿠키 메뉴 둘러보기</span>
-          <span>→</span>
-        </a>
-        <a 
-          href="#giftbox"
-          class="w-full sm:w-auto px-8 py-3.5 bg-white border-2 border-[#F0E6D6] hover:border-[#8B4513] text-[#4A3728] hover:text-[#8B4513] font-medium text-sm rounded-full shadow-sm hover:shadow-md transition-all duration-300 text-center flex items-center justify-center gap-2"
-        >
-          <span>🎁 상자 만들기 & 주문하기</span>
-        </a>
-      </div>
-
-      <!-- 신뢰 지표 마크 -->
-      <div class="mt-10 pt-8 border-t border-[#F0E6D6] flex justify-center lg:justify-start gap-8 text-[#8B4513]">
-        <div class="text-center lg:text-left">
-          <span class="block text-2xl font-serif font-bold text-[#4A3728]">100%</span>
-          <span class="text-xs text-[#4A3728]/70">천연 발효 버터</span>
-        </div>
-        <div class="w-[1px] bg-[#F0E6D6]"></div>
-        <div class="text-center lg:text-left">
-          <span class="block text-2xl font-serif font-bold text-[#4A3728]">당일 생산</span>
-          <span class="text-xs text-[#4A3728]/70">당일 전량 판매</span>
-        </div>
-        <div class="w-[1px] bg-[#F0E6D6]"></div>
-        <div class="text-center lg:text-left">
-          <span class="block text-2xl font-serif font-bold text-[#4A3728]">안전 배송</span>
-          <span class="text-xs text-[#4A3728]/70">체계적 안심 포장</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 이미지 영역 (수제 쿠키 일러스트 및 목업 플레이스홀더) -->
-    <div class="flex-1 w-full max-w-xl lg:max-w-none">
-      <div class="relative">
-        <div class="absolute -inset-2 bg-gradient-to-r from-[#F0E6D6] to-[#E0D5C1] rounded-2xl blur-lg opacity-45 -z-10"></div>
-        <div class="absolute -top-6 -left-6 w-16 h-16 rounded-full bg-[#F0E6D6] opacity-50 -z-10 flex items-center justify-center text-[#8B4513] font-serif text-3xl">☕</div>
-        <div class="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-[#FDFBF7] border-4 border-[#F0E6D6] opacity-60 -z-10"></div>
-
-        <!-- 감성을 더한 고해상도 베이커리 대표 일러스트 박스 -->
-        <div class="rounded-[32px] overflow-hidden shadow-2xl border-4 border-white aspect-[16/9] bg-[#FAF3EB] flex flex-col justify-center items-center p-8 text-center relative">
-          <!-- 데코 배경 원형 -->
-          <div class="absolute w-52 h-52 rounded-full bg-[#E8DCC4]/30 -z-0"></div>
-          <div class="z-10 mb-4 text-7xl animate-bounce">🍪✨</div>
-          <h3 class="z-10 font-serif font-bold text-2xl text-[#8B4513]">달콤공방 고메 로스터리</h3>
-          <p class="z-10 text-xs text-[#4A3728]/60 mt-1">갓 따끈하게 구운 건강한 수제 구움과자의 정석</p>
-        </div>
-        
-        <div class="absolute bottom-4 left-4 bg-[#FDFBF7]/95 border border-[#F0E6D6] p-3 rounded-xl shadow-md flex items-center gap-3 backdrop-blur-sm max-w-[245px]">
-          <div class="w-10 h-10 rounded-full bg-[#8B4513]/10 flex items-center justify-center text-[#8B4513]">
-            ✔
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-[#FDFBF7]/90 border-b border-[#F0E6D6] px-4 py-3 sm:px-8">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <a href="#hero" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded-full bg-[#8B4513] flex items-center justify-center text-white transition-transform group-hover:rotate-12 duration-300 shadow-md">
+            <i data-lucide="cookie" class="h-5 w-5"></i>
           </div>
           <div>
-            <span class="block text-xs font-bold text-[#4A3728]">당일 한정수량 안심 제조</span>
-            <span class="block text-[10px] text-[#8B4513]">신선도 유지를 위한 철저한 수칙</span>
+            <span class="font-serif font-bold text-lg sm:text-xl tracking-tight text-[#4A3728] block leading-tight">달콤공방</span>
+            <span class="text-[10px] sm:text-xs text-[#8B4513] font-medium tracking-widest uppercase font-serif">Sweets Atelier</span>
+          </div>
+        </a>
+        
+        <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-[#4A3728]/80">
+          <a href="#story" class="hover:text-[#8B4513] transition-colors">공방 이야기</a>
+          <a href="#products" class="hover:text-[#8B4513] transition-colors">대표 쿠키</a>
+          <a href="#giftbox" class="hover:text-[#8B4513] transition-colors">나만의 선물상자</a>
+          <a href="#faq" class="hover:text-[#8B4513] transition-colors">자주 묻는 질문</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="#giftbox" class="px-4 py-2 bg-[#8B4513] hover:bg-[#6F4E37] text-white font-semibold text-xs sm:text-sm rounded-full transition-all shadow-md hover:shadow-lg">
+            즉시 예약하기
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Hero Banner Section -->
+    <section id="hero" class="relative px-6 pt-12 pb-16 sm:py-20 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+      <div class="flex-grow flex-shrink-0 flex-1 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[#8B4513] text-xs font-semibold mb-6">
+          <i data-lucide="sparkles" class="h-3.5 w-3.5 text-amber-500 fill-current"></i>
+          <span>프리미엄 프랑스식 고메 수제 쿠키</span>
+        </div>
+        
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-[#4A3728] leading-[1.25] mb-6">
+          매일 아침 구워내는<br />
+          따뜻하고 <span class="text-[#8B4513] underline decoration-[#F0E6D6] decoration-8 underline-offset-4">달콤한 행복</span>
+        </h1>
+        
+        <p class="text-base sm:text-lg text-[#4A3728]/80 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8 font-light">
+          엄선된 유기농 밀가루와 순수 천연 발효 버터를 사용하여 만드는 달콤공방 수제쿠키는 한 입 베어 무는 순간 지친 하루에 깊고 따사로운 행복을 가득 채워 드립니다.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <a href="#products" class="w-full sm:w-auto px-8 py-3.5 bg-[#8B4513] hover:bg-[#6F4E37] text-white font-medium text-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-center flex items-center justify-center gap-2 group">
+            <span>쿠키 메뉴 둘러보기</span>
+            <i data-lucide="chevron-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+          <a href="#giftbox" class="w-full sm:w-auto px-8 py-3.5 bg-white border-2 border-[#F0E6D6] hover:border-[#8B4513] text-[#4A3728] hover:text-[#8B4513] font-medium text-sm rounded-full shadow-sm hover:shadow-md transition-all duration-300 text-center flex items-center justify-center gap-2">
+            <i data-lucide="gift" class="h-4 w-4"></i>
+            <span>상자 만들기 & 주문하기</span>
+          </a>
+        </div>
+
+        <div class="mt-10 pt-8 border-t border-[#F0E6D6] flex justify-center lg:justify-start gap-8 text-[#8B4513]">
+          <div class="text-center lg:text-left">
+            <span class="block text-2xl font-serif font-bold text-[#4A3728]">100%</span>
+            <span class="text-xs text-[#4A3728]/70">천연 발효 버터</span>
+          </div>
+          <div class="w-[1px] bg-[#F0E6D6]"></div>
+          <div class="text-center lg:text-left">
+            <span class="block text-2xl font-serif font-bold text-[#4A3728]">당일 생산</span>
+            <span class="text-xs text-[#4A3728]/70">당일 전량 판매</span>
+          </div>
+          <div class="w-[1px] bg-[#F0E6D6]"></div>
+          <div class="text-center lg:text-left">
+            <span class="block text-2xl font-serif font-bold text-[#4A3728]">안전 배송</span>
+            <span class="text-xs text-[#4A3728]/70">체계적 안심 포장</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+      
+      <div class="flex-1 w-full max-w-xl lg:max-w-none">
+        <div class="relative">
+          <div class="absolute -inset-2 bg-gradient-to-r from-[#F0E6D6] to-[#E0D5C1] rounded-2xl blur-lg opacity-45 -z-10"></div>
+          <div class="absolute -top-6 -left-6 w-16 h-16 rounded-full bg-[#F0E6D6] opacity-50 -z-10 flex items-center justify-center text-[#8B4513] font-serif text-3xl">☕</div>
+          <div class="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-[#FDFBF7] border-4 border-[#F0E6D6] opacity-60 -z-10"></div>
 
-  <!-- 약속 브랜드 약도 -->
-  <section id="story" class="py-16 sm:py-20 bg-[#F9F3EB] border-y border-[#F0E6D6]">
-    <div class="max-w-6xl mx-auto px-6">
+          <!-- Main Hero Applet Image Fallback Platter -->
+          <div class="rounded-[32px] overflow-hidden shadow-2xl border-4 border-white aspect-[16/9] bg-[#FAF3EB]">
+            <img 
+              src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1200&auto=format&fit=crop" 
+              alt="달콤공방 수제 쿠키 디저트" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+          
+          <div class="absolute bottom-4 left-4 bg-[#FDFBF7]/95 border border-[#F0E6D6] p-3 rounded-xl shadow-md flex items-center gap-3 backdrop-blur-sm max-w-[240px]">
+            <div class="w-10 h-10 rounded-full bg-[#8B4513]/10 flex items-center justify-center text-[#8B4513]">
+              <i data-lucide="shield-check" class="h-5 w-5"></i>
+            </div>
+            <div>
+              <span class="block text-xs font-bold text-[#4A3728]">당일 한정 수량 원스톱 제작</span>
+              <span class="block text-[10px] text-[#8B4513]">신선도 유지를 위한 원칙 수호</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Commitment Cards -->
+    <section id="story" class="py-16 sm:py-20 bg-[#F9F3EB] border-y border-[#F0E6D6]">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center mb-16">
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#4A3728] mb-4">달콤공방이 지켜나가는 세 가지 안심 약속</h2>
+          <p class="text-[#4A3728]/80 text-sm sm:text-base">오직 고객님의 소중한 디저트 타임이 더욱 향기로울 수 있도록 품질과 타협하지 않습니다.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-[32px] shadow-sm border border-[#F0E6D6]">
+            <div class="w-12 h-12 rounded-full bg-[#F9F3EB] text-[#8B4513] flex items-center justify-center mb-6">
+              <i data-lucide="heart" class="h-5 w-5"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-[#4A3728] mb-3">화학방부제 Zero 원조 순수식품</h3>
+            <p class="text-sm text-[#4A3728]/70 leading-relaxed">
+              가족이 먹는다는 일념 하에 일절 타르색소, 보존제, 유화제를 섞지 않습니다. 프랑스 고메 버터, 비정제 천연 원당만을 가득 채워 반죽합니다.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-[32px] shadow-sm border border-[#F0E6D6]">
+            <div class="w-12 h-12 rounded-full bg-[#F9F3EB] text-[#8B4513] flex items-center justify-center mb-6">
+              <i data-lucide="clock" class="h-5 w-5"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-[#4A3728] mb-3">매일 아침 구워내는 수제 공정</h3>
+            <p class="text-sm text-[#4A3728]/70 leading-relaxed">
+              대량 공급 프랜차이즈와 차원이 다른 묵직한 크래프팅을 선보입니다. 도우 기계 없이 정교하게 빚어 촉촉한 수분감을 보존합니다.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-[32px] shadow-sm border border-[#F0E6D6]">
+            <div class="w-12 h-12 rounded-full bg-[#F9F3EB] text-[#8B4513] flex items-center justify-center mb-6">
+              <i data-lucide="gift" class="h-5 w-5"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-[#4A3728] mb-3">고품격 크래프트 패키지</h3>
+            <p class="text-sm text-[#4A3728]/70 leading-relaxed">
+              쿠키 고유 향취가 섞이지 않도록 우수한 수기 개별 지퍼백으로 밀봉 보존 처리되며 브랜드 로고 리본 끈끈이에 담아 진심을 전합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Showcase Grid & Interactive Action -->
+    <section id="products" class="py-16 sm:py-24 max-w-6xl mx-auto px-6">
       <div class="max-w-2xl mx-auto text-center mb-16">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#4A3728] mb-4">달콤공방이 지켜나가는 세 가지 안심 약속</h2>
-        <p class="text-[#4A3728]/80 text-sm sm:text-base">오직 고객님의 소중한 디저트 타임이 더욱 향기로울 수 있도록 품질과 무타협합니다.</p>
+        <span class="text-xs font-bold text-[#8B4513] tracking-widest uppercase font-serif">Aesthetic Selections</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#4A3728] mt-2 mb-4">달콤공방 대표 수제 쿠키</h2>
+        <p class="text-[#4A3728]/80 font-light">매일 정성스레 구워져 고객들의 오감을 사로잡는 달콤공방의 Signature Best Menu 제품을 소개합니다.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- 약속 카드 1 -->
-        <div class="bg-white p-8 rounded-[32px] shadow-sm border border-[#F0E6D6] hover:shadow-md transition-all duration-300">
-          <div class="w-12 h-12 rounded-full bg-[#F9F3EB] text-[#8B4513] flex items-center justify-center mb-6 text-xl">
-            💝
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <!-- Choco Card -->
+        <div class="group bg-white rounded-[48px] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-[#F0E6D6] flex flex-col h-full">
+          <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#FAF3EB]">
+            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80" alt="더블 초코칩 쿠키" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            <span class="absolute top-4 left-4 px-3 py-1 bg-[#8B4513] text-white text-[10px] font-bold rounded-full uppercase tracking-wider">Signature</span>
           </div>
-          <h3 class="font-serif text-lg font-bold text-[#4A3728] mb-3">화학방부제 Zero 건강식품</h3>
-          <p class="text-sm text-[#4A3728]/70 leading-relaxed">
-            가족이 편히 먹는다는 신념 하에 인공색소, 가루 보존제, 유화제를 절대 사용하지 않습니다. 프랑스 및 벨기에산 고메 발효 천연 버터로 향을 가득 채웁니다.
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between mb-2">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-[#4A3728] tracking-tight">더블 초코칩 쿠키</h3>
+                  <span class="text-[10px] text-[#4A3728]/50 block tracking-wider uppercase font-sans font-medium">Double Chocolate Chip</span>
+                </div>
+                <span class="font-serif font-bold text-lg text-[#8B4513] whitespace-nowrap">3,800원</span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#4A3728]/80 leading-relaxed font-light mb-6">
+                프랑스산 최고급 발로나 초콜릿칩과 깔리바우트 다크 초콜릿이 쏟아질 듯 듬뿍 박힌 달콤공방의 시그니처 겉바속촉 수제 쿠키.
+              </p>
+            </div>
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2.5 py-0.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[10px] text-[#8B4513] font-medium">🌿 프랑스 버터</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[10px] text-[#8B4513] font-medium">🌿 발로나 초코</span>
+              </div>
+              <button onclick="addToSim('choco')" class="w-full py-3 bg-[#8B4513] hover:bg-[#6F4E37] text-white font-sans font-bold text-xs rounded-full transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                <i data-lucide="plus" class="h-3.5 w-3.5"></i>
+                <span>선물 세트에 담기</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Matcha Card -->
+        <div class="group bg-white rounded-[48px] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-[#F0E6D6] flex flex-col h-full">
+          <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#FAF3EB]">
+            <!-- Using beautiful high-quality matcha/green cookies alternative image placeholder -->
+            <img src="https://images.unsplash.com/photo-1548940740-2047263be9b3?auto=format&fit=crop&w=600&q=80" alt="제주 말차 화이트 쿠키" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            <span class="absolute top-4 left-4 px-3 py-1 bg-emerald-700 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">Best Seller</span>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between mb-2">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-[#4A3728] tracking-tight">제주 말차 화이트 쿠키</h3>
+                  <span class="text-[10px] text-[#4A3728]/50 block tracking-wider uppercase font-sans font-medium">Jeju Matcha White</span>
+                </div>
+                <span class="font-serif font-bold text-lg text-[#8B4513] whitespace-nowrap">4,200원</span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#4A3728]/80 leading-relaxed font-light mb-6">
+                프리미엄 유기농 제주 말차의 쌉싸름한 깊은 향기에 부드러운 벨기에산 화이트 초코와 고급 마카다미아가 아낌없이 어우러진 쿠키.
+              </p>
+            </div>
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2.5 py-0.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[10px] text-[#8B4513] font-medium">🌿 제주 유기 말차</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[10px] text-[#8B4513] font-medium">🌿 마카다미아</span>
+              </div>
+              <button onclick="addToSim('matcha')" class="w-full py-3 bg-[#8B4513] hover:bg-[#6F4E37] text-white font-sans font-bold text-xs rounded-full transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                <i data-lucide="plus" class="h-3.5 w-3.5"></i>
+                <span>선물 세트에 담기</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caramel Card -->
+        <div class="group bg-white rounded-[48px] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-[#F0E6D6] flex flex-col h-full">
+          <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#FAF3EB]">
+            <img src="https://images.unsplash.com/photo-1558961309-dbdf0dd830de?auto=format&fit=crop&w=600&q=80" alt="단짠 솔티드 카라멜 쿠키" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            <span class="absolute top-4 left-4 px-3 py-1 bg-amber-600 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">Sweet & Salty</span>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between mb-2">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-[#4A3728] tracking-tight">단짠 솔티드 카라멜 쿠키</h3>
+                  <span class="text-[10px] text-[#4A3728]/50 block tracking-wider uppercase font-sans font-medium">Salted Caramel</span>
+                </div>
+                <span class="font-serif font-bold text-lg text-[#8B4513] whitespace-nowrap">4,000원</span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#4A3728]/80 leading-relaxed font-light mb-6">
+                매장에서 수제로 끓인 리얼 생카라멜 소스의 진한 고소함과 프랑스 게랑드 천일염 솔트의 기분 좋은 짭조름함이 환상의 단짠을 제공합니다.
+              </p>
+            </div>
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2.5 py-0.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[10px] text-[#8B4513] font-medium">🌿 수제 카라멜</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[10px] text-[#8B4513] font-medium">🌿 게랑드 토성 소금</span>
+              </div>
+              <button onclick="addToSim('caramel')" class="w-full py-3 bg-[#8B4513] hover:bg-[#6F4E37] text-white font-sans font-bold text-xs rounded-full transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+                <i data-lucide="plus" class="h-3.5 w-3.5"></i>
+                <span>선물 세트에 담기</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-[32px] bg-[#FDFBF7] border border-[#F0E6D6] max-w-xl mx-auto flex flex-col sm:flex-row items-center gap-4 shadow-sm">
+        <div class="w-12 h-12 rounded-full bg-[#8B4513]/10 flex items-center justify-center text-[#8B4513] flex-shrink-0">
+          <i data-lucide="thumbs-up" class="h-6 w-6"></i>
+        </div>
+        <div class="text-center sm:text-left">
+          <h4 class="font-serif font-bold text-sm text-[#4A3728] mb-1">어떤 구성을 조합해도 고른 만족을 자부합니다</h4>
+          <p class="text-[11px] text-[#4A3728]/70 leading-relaxed">
+            초콜릿의 부드러움, 말차의 그윽함, 수제 잔물 카라멜까지 균형있게 믹스 매치 하셔서 박스 수량을 늘리실수록 선물세트 내부의 색감과 식감 밸런스가 최고조에 안착합니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Customizer Section -->
+    <section id="giftbox" class="py-16 sm:py-24 bg-[#F9F3EB] border-t border-b border-[#F0E6D6]">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 bg-[#F0E6D6] text-[#4A3728] text-xs font-bold rounded-full mb-3 uppercase tracking-wider font-serif">Interactive Box Builder</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#4A3728] mb-4">실시간 선물 상자 주문서 작성기</h2>
+          <p class="text-xs sm:text-sm text-[#4A3728]/85 font-light">
+            원하는 수량을 기입해 주시면 총 결제 견적이 즉각 집계되며,<br />
+            완성된 전개 주문서는 복사하여 카카오톡 상담 예약창에 바로 전달하실 수 있습니다.
           </p>
         </div>
 
-        <!-- 약속 카드 2 -->
-        <div class="bg-white p-8 rounded-[32px] shadow-sm border border-[#F0E6D6] hover:shadow-md transition-all duration-300">
-          <div class="w-12 h-12 rounded-full bg-[#F9F3EB] text-[#8B4513] flex items-center justify-center mb-6 text-xl">
-            ⏰
-          </div>
-          <h3 class="font-serif text-lg font-bold text-[#4A3728] mb-3">매일 아침 직접 구워내는 정성</h3>
-          <p class="text-sm text-[#4A3728]/70 leading-relaxed">
-            프레싱 손틀 방식을 이용해 매일 아침 반죽하여 바로 구워내는 촉촉함이 특징입니다. 겉은 바삭하고 속은 브라우니처럼 쫀득하게 살아있는 참맛을 약속합니다.
-          </p>
-        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-white p-6 sm:p-10 rounded-[32px] shadow-lg border border-[#F0E6D6]">
+          
+          <!-- Left Picker -->
+          <div class="lg:col-span-7 space-y-6">
+            <h3 class="font-serif text-lg font-bold text-[#4A3728] border-b border-[#F0E6D6] pb-3 flex items-center gap-2">
+              <i data-lucide="shopping-bag" class="h-5 w-5 text-[#8B4513]"></i>
+              <span>1. 쿠키 수량 선택</span>
+            </h3>
 
-        <!-- 약속 카드 3 -->
-        <div class="bg-white p-8 rounded-[32px] shadow-sm border border-[#F0E6D6] hover:shadow-md transition-all duration-300">
-          <div class="w-12 h-12 rounded-full bg-[#F9F3EB] text-[#8B4513] flex items-center justify-center mb-6 text-xl">
-            🎁
-          </div>
-          <h3 class="font-serif text-lg font-bold text-[#4A3728] mb-3">고품격 크래프트 선물상자 제공</h3>
-          <p class="text-sm text-[#4A3728]/70 leading-relaxed">
-            모든 정성스러운 쿠키는 고급 친환경 포장지에 꼼꼼하게 개별 수분 증발 차단 방습 개별 봉합 후 완충 크래프트 패프리스 상자에 감동을 실어 드립니다.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 대표 상품 리스트 (초코칩, 말차, 솔티드 카라멜) -->
-  <section id="products" class="py-16 sm:py-24 max-w-6xl mx-auto px-6">
-    <div class="max-w-2xl mx-auto text-center mb-16">
-      <span class="text-xs font-bold text-[#8B4513] tracking-widest uppercase font-serif">Aesthetic Selections</span>
-      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#4A3728] mt-2 mb-4">달콤공방 대표 시그니처 3선</h2>
-      <p class="text-[#4A3728]/80 font-light">매일 정성스레 구워져 큰 사랑을 받는 달콤공방 시그니처 대표 구움쿠키들을 자랑스럽게 소개합니다.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-      
-      <!-- 상품 1: 더블 초코칩 쿠키 -->
-      <div class="group bg-white rounded-[48px] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-[#F0E6D6] flex flex-col h-full">
-        <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#FAF3EB] flex items-center justify-center text-6xl">
-          🍪
-          <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-[#8B4513] text-white shadow-inner">
-            Signature
-          </div>
-        </div>
-        <div class="p-8 flex-1 flex flex-col justify-between">
-          <div>
-            <div class="flex items-start justify-between mb-2">
-              <div>
-                <h3 class="font-serif text-xl font-bold text-[#4A3728] tracking-tight">더블 초코칩 쿠키</h3>
-                <span class="text-[10px] text-[#4A3728]/50 block tracking-wider uppercase font-sans font-medium">Double Chocolate Chip</span>
-              </div>
-              <span class="font-serif font-bold text-lg text-[#8B4513] whitespace-nowrap">3,800원</span>
-            </div>
-            <p class="text-xs sm:text-sm text-[#4A3728]/80 leading-relaxed font-light mb-6">
-              프랑스 최고급 발로나 초콜릿칩과 벨기에산 다크 초콜릿청크가 기분 좋은 조화를 이루는 달콤함의 정석 겉바속촉 수제 쿠키.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="px-2 py-0.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[10px] text-[#8B4513] font-medium">🌿 유기농 밀가루</span>
-              <span class="px-2 py-0.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[10px] text-[#8B4513] font-medium">🌿 다크 초코 55%</span>
-            </div>
-            <button 
-              onclick="addCookie('choco')"
-              class="w-full py-3 bg-[#8B4513] hover:bg-[#6F4E37] text-white font-sans font-bold text-xs rounded-full transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
-            >
-              <span>+ 장바구니 상자담기</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 상품 2: 제주 말차 화이트 쿠키 -->
-      <div class="group bg-white rounded-[48px] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-[#F0E6D6] flex flex-col h-full">
-        <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#FAF3EB] flex items-center justify-center text-6xl">
-          🍵
-          <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-700 text-white shadow-inner">
-            Best Seller
-          </div>
-        </div>
-        <div class="p-8 flex-1 flex flex-col justify-between">
-          <div>
-            <div class="flex items-start justify-between mb-2">
-              <div>
-                <h3 class="font-serif text-xl font-bold text-[#4A3728] tracking-tight">제주 말차 화이트 쿠키</h3>
-                <span class="text-[10px] text-[#4A3728]/50 block tracking-wider uppercase font-sans font-medium">Jeju Matcha White</span>
-              </div>
-              <span class="font-serif font-bold text-lg text-[#8B4513] whitespace-nowrap">4,200원</span>
-            </div>
-            <p class="text-xs sm:text-sm text-[#4A3728]/80 leading-relaxed font-light mb-6">
-              제주에서 건너온 부드럽고 쌉싸름한 고유 말차잎 파우더 반죽 위에 달디단 화이트 초콜릿과 오독도독 씹히는 호주 마카다미아가 가득한 조화.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="px-2 py-0.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[10px] text-[#8B4513] font-medium">🌿 제주 우수 유기농</span>
-              <span class="px-2 py-0.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[10px] text-[#8B4513] font-medium">🌿 고소 고소 마카다미아</span>
-            </div>
-            <button 
-              onclick="addCookie('matcha')"
-              class="w-full py-3 bg-[#8B4513] hover:bg-[#6F4E37] text-white font-sans font-bold text-xs rounded-full transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
-            >
-              <span>+ 장바구니 상자담기</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 상품 3: 단짠 솔티드 카라멜 쿠키 -->
-      <div class="group bg-white rounded-[48px] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-[#F0E6D6] flex flex-col h-full">
-        <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#FAF3EB] flex items-center justify-center text-6xl">
-          🍯
-          <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-amber-600 text-white shadow-inner">
-            Sweet & Salty
-          </div>
-        </div>
-        <div class="p-8 flex-1 flex flex-col justify-between">
-          <div>
-            <div class="flex items-start justify-between mb-2">
-              <div>
-                <h3 class="font-serif text-xl font-bold text-[#4A3728] tracking-tight">단짠 솔티드 카라멜</h3>
-                <span class="text-[10px] text-[#4A3728]/50 block tracking-wider uppercase font-sans font-medium">Salted Caramel</span>
-              </div>
-              <span class="font-serif font-bold text-lg text-[#8B4513] whitespace-nowrap">4,000원</span>
-            </div>
-            <p class="text-xs sm:text-sm text-[#4A3728]/80 leading-relaxed font-light mb-6">
-              매장에서 장시간 직접 졸여 볶아낸 수제 버터 카라멜의 달큼함에 프랑스 게랑드 황실 천일염을 뿌려 질리지 않는 환상의 황금 밸런스를 이룹니다.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="px-2 py-0.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[10px] text-[#8B4513] font-medium">🌿 비정제 유기 원당</span>
-              <span class="px-2 py-0.5 rounded-full bg-[#F9F3EB] border border-[#F0E6D6] text-[10px] text-[#8B4513] font-medium">🌿 게랑드 토속 암염</span>
-            </div>
-            <button 
-              onclick="addCookie('caramel')"
-              class="w-full py-3 bg-[#8B4513] hover:bg-[#6F4E37] text-white font-sans font-bold text-xs rounded-full transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
-            >
-              <span>+ 장바구니 상자담기</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- 가벼운 하단 안내 문구 -->
-    <div class="p-6 rounded-[32px] bg-[#FDFBF7] border border-[#F0E6D6] max-w-xl mx-auto flex flex-col sm:flex-row items-center gap-4 shadow-sm">
-      <div class="w-12 h-12 rounded-full bg-[#8B4513]/10 flex items-center justify-center text-[#8B4513] flex-shrink-0 text-xl font-bold">
-        👍
-      </div>
-      <div class="text-center sm:text-left">
-        <h4 class="font-serif font-bold text-sm text-[#4A3728] mb-1">어떤 구성을 섞어도 놀랍도록 다채롭습니다</h4>
-        <p class="text-[11px] text-[#4A3728]/70 leading-relaxed">
-          초코, 카라멜 테이스티, 진한 말차 고유의 향기의 밸런스가 최고조로 정렬될 수 있게끔 세심하게 맞추어 정성을 다해 안전하게 내포되어 준비를 마칩니다. 
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 실시간 인스턴스 나만의 선물 상자 빌더 계산기 -->
-  <section id="giftbox" class="py-16 sm:py-24 bg-[#F9F3EB] border-t border-b border-[#F0E6D6]">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="inline-block px-3 py-1 bg-[#F0E6D6] text-[#4A3728] text-xs font-bold rounded-full mb-3 uppercase tracking-wider font-serif">Interactive Box Builder</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#4A3728] mb-4">실시간 선물 상자 주문서 계산기</h2>
-        <p class="text-xs sm:text-sm text-[#4A3728]/85 font-light">
-          원하는 종류와 수량을 추가해보세요. 포장과 수령 방식에 무관케 자동으로 실시간 결제를 도와주며,<br />
-          복사된 포맷 그대로 카카오톡 고객 상담센터 메신저로 쾌속 주문을 논스톱 가능합니다.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-white p-6 sm:p-10 rounded-[32px] shadow-lg border border-[#F0E6D6]">
-        
-        <!-- 왼쪽 항목 변경 빌더 패널 (7 cols) -->
-        <div class="lg:col-span-7 space-y-6">
-          <h3 class="font-serif text-lg font-bold text-[#4A3728] border-b border-[#F0E6D6] pb-3 flex items-center gap-2">
-            <span>🛒 1. 쿠키 수량 선택</span>
-          </h3>
-
-          <!-- 초코칩 카니티 카운터 -->
-          <div class="flex items-center justify-between p-3.5 rounded-2xl hover:bg-[#FDFBF7] transition-all border border-transparent hover:border-dashed hover:border-[#F0E6D6]">
-            <div class="flex items-center gap-3">
-              <span class="text-3xl">🍪</span>
-              <div>
-                <span class="block font-serif font-bold text-sm text-[#4A3728]">더블 초코칩 쿠키</span>
-                <span class="text-xs text-[#8B4513]">3,800원</span>
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <button onclick="changeQty('choco', -1)" class="w-8 h-8 rounded-full border border-stone-300 hover:border-[#8B4513] flex items-center justify-center text-[#4A3728] hover:bg-[#F9F3EB] active:scale-95 transition-all outline-none">-</button>
-              <span id="qty-choco" class="w-6 text-center text-sm font-bold text-[#4A3728]">0</span>
-              <button onclick="changeQty('choco', 1)" class="w-8 h-8 rounded-full border border-stone-300 hover:border-[#8B4513] flex items-center justify-center text-[#4A3728] hover:bg-[#F9F3EB] active:scale-95 transition-all outline-none">+</button>
-            </div>
-          </div>
-
-          <!-- 말차 쿠키 수량 카운터 -->
-          <div class="flex items-center justify-between p-3.5 rounded-2xl hover:bg-[#FDFBF7] transition-all border border-transparent hover:border-dashed hover:border-[#F0E6D6]">
-            <div class="flex items-center gap-3">
-              <span class="text-3xl">🍵</span>
-              <div>
-                <span class="block font-serif font-bold text-sm text-[#4A3728]">제주 말차 화이트 쿠키</span>
-                <span class="text-xs text-[#8B4513]">4,200원</span>
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <button onclick="changeQty('matcha', -1)" class="w-8 h-8 rounded-full border border-stone-300 hover:border-[#8B4513] flex items-center justify-center text-[#4A3728] hover:bg-[#F9F3EB] active:scale-95 transition-all outline-none">-</button>
-              <span id="qty-matcha" class="w-6 text-center text-sm font-bold text-[#4A3728]">0</span>
-              <button onclick="changeQty('matcha', 1)" class="w-8 h-8 rounded-full border border-stone-300 hover:border-[#8B4513] flex items-center justify-center text-[#4A3728] hover:bg-[#F9F3EB] active:scale-95 transition-all outline-none">+</button>
-            </div>
-          </div>
-
-          <!-- 솔티드 카라멜 카운터 -->
-          <div class="flex items-center justify-between p-3.5 rounded-2xl hover:bg-[#FDFBF7] transition-all border border-transparent hover:border-dashed hover:border-[#F0E6D6]">
-            <div class="flex items-center gap-3">
-              <span class="text-3xl">🍯</span>
-              <div>
-                <span class="block font-serif font-bold text-sm text-[#4A3728]">단짠 솔티드 카라멜 쿠키</span>
-                <span class="text-xs text-[#8B4513]">4,000원</span>
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <button onclick="changeQty('caramel', -1)" class="w-8 h-8 rounded-full border border-stone-300 hover:border-[#8B4513] flex items-center justify-center text-[#4A3728] hover:bg-[#F9F3EB] active:scale-95 transition-all outline-none">-</button>
-              <span id="qty-caramel" class="w-6 text-center text-sm font-bold text-[#4A3728]">0</span>
-              <button onclick="changeQty('caramel', 1)" class="w-8 h-8 rounded-full border border-stone-300 hover:border-[#8B4513] flex items-center justify-center text-[#4A3728] hover:bg-[#F9F3EB] active:scale-95 transition-all outline-none">+</button>
-            </div>
-          </div>
-
-          <!-- 2단계: 크라프트 상자선택 포장 -->
-          <div class="space-y-3 pt-4 border-t border-[#F0E6D6]">
-            <h4 class="font-serif font-bold text-sm text-[#4A3728] flex items-center gap-2">
-              <span>🎁 2. 포장 패키징 선택</span>
-            </h4>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <button
-                id="pack-basic"
-                onclick="setPackaging('basic')"
-                class="p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#8B4513] bg-[#F9F3EB]"
-              >
-                <span class="font-bold text-xs text-[#4A3728] flex items-center gap-1">
-                  기본 종이백 포장 (무료)
-                </span>
-                <span class="text-[11px] text-[#4A3728]/70 mt-1">친환경 종이봉투에 개별 안전 안전 밀폐 후 간편 납품합니다.</span>
-              </button>
-
-              <button
-                id="pack-gift"
-                onclick="setPackaging('gift')"
-                class="p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#F0E6D6] hover:border-[#8B4513]"
-              >
-                <span class="font-bold text-xs text-[#4A3728] flex items-center gap-1">
-                  프리미엄 크래프트 박스 (+1,000원)
-                </span>
-                <span class="text-[11px] text-[#4A3728]/70 mt-1">달콤공방 가구풍 레트로 하드 박스 및 수공예 마 끈 선물세트 포장.</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- 3단계: 배송여부 픽업/택배 -->
-          <div class="space-y-3 pt-4 border-t border-[#F0E6D6]">
-            <h4 class="font-serif font-bold text-sm text-[#4A3728] flex items-center gap-2">
-              <span>📍 3. 수령 및 배송 방식</span>
-            </h4>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <button
-                id="ship-pickup"
-                onclick="setShipping('pickup')"
-                class="p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#F0E6D6] hover:border-[#8B4513]"
-              >
-                <span class="font-bold text-xs text-[#4A3728] flex items-center gap-1">
-                  달콤공방 매장 직접 픽업 (무료)
-                </span>
-                <span class="text-[11px] text-[#4A3728]/70 mt-1">서계동 숲속 매장에서 갓 따끈한 상태에 시간 맞춰 받아가실 수 있습니다.</span>
-              </button>
-
-              <button
-                id="ship-courier"
-                onclick="setShipping('courier')"
-                class="p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#8B4513] bg-[#F9F3EB]"
-              >
-                <span class="font-bold text-xs text-[#4A3728] flex items-center gap-1">
-                  신선 우체국 안심택배 (+3,500원)
-                </span>
-                <span class="text-[11px] text-[#4A3728]/70 mt-1">바사삭 파손 걱정 비껴갈 꼼꼼 2차 에어 패킹 수호 배정망 구축.</span>
-              </button>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- 오른쪽 계산서 전광판 (5 cols) -->
-        <div class="lg:col-span-5 bg-[#FAF3EB] p-6 rounded-[32px] border border-[#F0E6D6] flex flex-col justify-between">
-          <div>
-            <h4 class="font-serif font-bold text-base text-[#4A3728] border-b border-[#F0E6D6] pb-2 mb-4">
-              실시간 주문 영수증
-            </h4>
-
-            <div id="empty-state" class="py-12 text-center text-[#4A3728]/50 block">
-              <p class="text-xs">상단의 쿠키에서 수량을 먼저 하나이상 담아 기입해 주세요.</p>
-            </div>
-
-            <div id="invoice-bill" class="space-y-3.5 text-xs text-[#4A3728]/80 hidden">
-              <!--동적 기재 영역-->
-              <div id="bill-items" class="space-y-2"></div>
-              
-              <div class="w-full h-[1px] bg-[#F0E6D6] my-2"></div>
-
-              <div class="flex justify-between items-center text-[11px]">
-                <span>쿠키 품목 합산액</span>
-                <span id="bill-subtotal">0원</span>
+            <div class="space-y-4">
+              <!-- Item 1 Choco -->
+              <div class="flex items-center justify-between p-3.5 rounded-2xl hover:bg-[#FDFBF7] transition-colors border border-transparent hover:border-dashed hover:border-[#F0E6D6]">
+                <div class="flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=120&q=80" alt="더블 초코칩" class="w-12 h-12 rounded-xl object-cover" />
+                  <div>
+                    <span class="block font-serif font-bold text-sm text-[#4A3728]">더블 초코칩 쿠키</span>
+                    <span class="text-xs text-[#8B4513]">3,800원</span>
+                  </div>
+                </div>
+                <!-- Counter -->
+                <div class="flex items-center gap-3">
+                  <button onclick="changeQty('choco', -1)" class="w-8 h-8 rounded-full border border-stone-300 hover:border-[#8B4513] flex items-center justify-center text-[#4A3728] hover:text-[#8B4513] hover:bg-[#F9F3EB] transition-colors cursor-pointer">
+                    <i data-lucide="minus" class="h-3.5 w-3.5"></i>
+                  </button>
+                  <span id="qty-choco" class="w-6 text-center text-sm font-bold text-[#4A3728]">0</span>
+                  <button onclick="changeQty('choco', 1)" class="w-8 h-8 rounded-full border border-stone-300 hover:border-[#8B4513] flex items-center justify-center text-[#4A3728] hover:text-[#8B4513] hover:bg-[#F9F3EB] transition-colors cursor-pointer">
+                    <i data-lucide="plus" class="h-3.5 w-3.5"></i>
+                  </button>
+                </div>
               </div>
 
-              <div class="flex justify-between items-center text-[11px]">
-                <span>선물박스 가산비</span>
-                <span id="bill-pack">+0원</span>
+              <!-- Item 2 Matcha -->
+              <div class="flex items-center justify-between p-3.5 rounded-2xl hover:bg-[#FDFBF7] transition-colors border border-transparent hover:border-dashed hover:border-[#F0E6D6]">
+                <div class="flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1548940740-2047263be9b3?auto=format&fit=crop&w=120&q=80" alt="제주 말차" class="w-12 h-12 rounded-xl object-cover" />
+                  <div>
+                    <span class="block font-serif font-bold text-sm text-[#4A3728]">제주 말차 화이트 쿠키</span>
+                    <span class="text-xs text-[#8B4513]">4,200원</span>
+                  </div>
+                </div>
+                <!-- counter -->
+                <div class="flex items-center gap-3">
+                  <button onclick="changeQty('matcha', -1)" class="w-8 h-8 rounded-full border border-stone-300 hover:border-[#8B4513] flex items-center justify-center text-[#4A3728] hover:text-[#8B4513] hover:bg-[#F9F3EB] transition-colors cursor-pointer">
+                    <i data-lucide="minus" class="h-3.5 w-3.5"></i>
+                  </button>
+                  <span id="qty-matcha" class="w-6 text-center text-sm font-bold text-[#4A3728]">0</span>
+                  <button onclick="changeQty('matcha', 1)" class="w-8 h-8 rounded-full border border-stone-300 hover:border-[#8B4513] flex items-center justify-center text-[#4A3728] hover:text-[#8B4513] hover:bg-[#F9F3EB] transition-colors cursor-pointer">
+                    <i data-lucide="plus" class="h-3.5 w-3.5"></i>
+                  </button>
+                </div>
               </div>
 
-              <div class="flex justify-between items-center text-[11px]">
-                <span>배송비</span>
-                <span id="bill-shipping">+3,500원</span>
-              </div>
-
-              <div class="w-full h-[1px] bg-[#F0E6D6] my-2"></div>
-
-              <div class="flex justify-between items-end text-sm text-[#4A3728] font-serif font-bold pt-1">
-                <span>최대 최종 합계</span>
-                <span id="bill-total" class="text-lg text-[#8B4513]">0원</span>
-              </div>
-              
-              <div class="mt-4 p-3 rounded-xl bg-white/70 border border-[#F0E6D6]/60 flex items-center gap-2">
-                <div class="text-xs text-[#8B4513] font-semibold">🎁 장바구니 보관상태:</div>
-                <div id="total-badge" class="flex gap-1 text-[10px] bg-[#8B4513] text-white px-2.5 py-0.5 rounded-full font-bold">
-                  총 0개
+              <!-- Item 3 Caramel -->
+              <div class="flex items-center justify-between p-3.5 rounded-2xl hover:bg-[#FDFBF7] transition-colors border border-transparent hover:border-dashed hover:border-[#F0E6D6]">
+                <div class="flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1558961309-dbdf0dd830de?auto=format&fit=crop&w=120&q=80" alt="솔티드 카라멜" class="w-12 h-12 rounded-xl object-cover" />
+                  <div>
+                    <span class="block font-serif font-bold text-sm text-[#4A3728]">단짠 솔티드 카라멜 쿠키</span>
+                    <span class="text-xs text-[#8B4513]">4,000원</span>
+                  </div>
+                </div>
+                <!-- counter -->
+                <div class="flex items-center gap-3">
+                  <button onclick="changeQty('caramel', -1)" class="w-8 h-8 rounded-full border border-stone-300 hover:border-[#8B4513] flex items-center justify-center text-[#4A3728] hover:text-[#8B4513] hover:bg-[#F9F3EB] transition-colors cursor-pointer">
+                    <i data-lucide="minus" class="h-3.5 w-3.5"></i>
+                  </button>
+                  <span id="qty-caramel" class="w-6 text-center text-sm font-bold text-[#4A3728]">0</span>
+                  <button onclick="changeQty('caramel', 1)" class="w-8 h-8 rounded-full border border-stone-300 hover:border-[#8B4513] flex items-center justify-center text-[#4A3728] hover:text-[#8B4513] hover:bg-[#F9F3EB] transition-colors cursor-pointer">
+                    <i data-lucide="plus" class="h-3.5 w-3.5"></i>
+                  </button>
                 </div>
               </div>
             </div>
+
+            <!-- Packaging -->
+            <div class="space-y-3 pt-4 border-t border-[#F0E6D6]">
+              <h4 class="font-serif font-bold text-sm text-[#4A3728] flex items-center gap-2">
+                <i data-lucide="gift" class="h-4 w-4 text-[#8B4513]"></i>
+                <span>2. 포장 패키징 선택</span>
+              </h4>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button id="pack-basic" onclick="setPackOption('basic')" class="p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#F0E6D6] hover:border-[#8B4513]">
+                  <span class="font-bold text-xs text-[#4A3728] flex items-center gap-1">
+                    기본 종이백 포장 (무료)
+                  </span>
+                  <span class="text-[11px] text-[#4A3728]/70 mt-1">친환경 유기종이백에 하나씩 포장을 마친 산뜻한 기본 주전부리 구성 패키지입니다.</span>
+                </button>
+                <button id="pack-gift" onclick="setPackOption('gift')" class="p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#8B4513] bg-[#F9F3EB]">
+                  <span class="font-bold text-xs text-[#4A3728] flex items-center gap-1">
+                    <i data-lucide="check" class="h-3.5 w-3.5 text-[#8B4513]"></i>
+                    프리미엄 크래프트 박스 (+1,000원)
+                  </span>
+                  <span class="text-[11px] text-[#4A3728]/70 mt-1">감각적인 레트로 박스 및 달콤공방 자체 제작 실 스티커와 고급 마 패키징끈에 동봉됩니다.</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Shipping -->
+            <div class="space-y-3 pt-4 border-t border-[#F0E6D6]">
+              <h4 class="font-serif font-bold text-sm text-[#4A3728] flex items-center gap-2">
+                <i data-lucide="map-pin" class="h-4 w-4 text-[#8B4513]"></i>
+                <span>3. 수령 및 배송 방식</span>
+              </h4>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button id="ship-pickup" onclick="setShipOption('pickup')" class="p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#F0E6D6] hover:border-[#8B4513]">
+                  <span class="font-bold text-xs text-[#4A3728] flex items-center gap-1">
+                    달콤공방 매장 직접 픽업 (무료)
+                  </span>
+                  <span class="text-[11px] text-[#4A3728]/70 mt-1">용산 서계동 공방으로 내점하여 방문 후 가장 신선한 정각의 과자를 즉시 픽업합니다.</span>
+                </button>
+                <button id="ship-courier" onclick="setShipOption('courier')" class="p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#8B4513] bg-[#F9F3EB]">
+                  <span class="font-bold text-xs text-[#4A3728] flex items-center gap-1">
+                    <i data-lucide="check" class="h-3.5 w-3.5 text-[#8B4513]"></i>
+                    신선 우체국 안심택배 (+3,500원)
+                  </span>
+                  <span class="text-[11px] text-[#4A3728]/70 mt-1">구워진 즉시 충격 흡수 크라프트 패딩으로 정교히 고정한 우체국 특급 하루 안심 배송.</span>
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div class="mt-8 space-y-3">
-            <button
-              id="order-btn"
-              onclick="copyAndShowModal()"
-              disabled
-              class="w-full py-4 bg-stone-200 text-stone-400 cursor-not-allowed rounded-full text-sm font-bold shadow-md transition-all flex items-center justify-center gap-2 outline-none"
-            >
-              <span>주문 양식 복사 & 바로 예약</span>
-            </button>
-            <p class="text-[10px] text-[#4A3728]/50 text-center leading-relaxed">
-              ※ 클릭 시 카톡 상담창에서 그대로 복사-붙여넣기 한글 입력 가능한 가상 "주문 양서" 폼이 클립보드에 초스피드 내장 복사됩니다.
-            </p>
+          <!-- Right Calculation Panel -->
+          <div class="lg:col-span-5 bg-[#FAF3EB] p-6 rounded-[32px] border border-[#F0E6D6] flex flex-col justify-between">
+            <div>
+              <h4 class="font-serif font-bold text-base text-[#4A3728] border-b border-[#F0E6D6] pb-2 mb-4">
+                실시간 주문 계산서
+              </h4>
+
+              <!-- Empty Alert -->
+              <div id="calc-empty" class="py-12 text-center text-[#4A3728]/50">
+                <p class="text-xs">상단의 수량을 추가하여 실시간 주문 시뮬레이션을 시작해주세요.</p>
+              </div>
+
+              <!-- Filled State -->
+              <div id="calc-filled" class="hidden space-y-3.5 text-xs text-[#4A3728]/80">
+                <div id="invoice-items" class="space-y-2">
+                  <!-- Dynamic render here -->
+                </div>
+                
+                <div class="w-full h-[1px] bg-[#F0E6D6] my-2"></div>
+
+                <div class="flex justify-between items-center text-[11px]">
+                  <span>쿠키 원가 합계</span>
+                  <span id="price-subtotal">0원</span>
+                </div>
+                <div class="flex justify-between items-center text-[11px]">
+                  <span>포장 요금</span>
+                  <span id="price-pack">1,000원</span>
+                </div>
+                <div class="flex justify-between items-center text-[11px]">
+                  <span>배송 비용</span>
+                  <span id="price-ship">+3,500원</span>
+                </div>
+
+                <div class="w-full h-[1px] bg-[#F0E6D6] my-2"></div>
+
+                <div class="flex justify-between items-end text-sm text-[#4A3728] font-serif font-bold pt-1">
+                  <span>최종 예상 합계</span>
+                  <span id="price-total" class="text-lg text-[#8B4513]">0원</span>
+                </div>
+                
+                <div class="mt-4 p-3 rounded-xl bg-white/70 border border-[#F0E6D6]/60 flex items-center gap-2">
+                  <div class="text-xs text-[#8B4513] font-semibold">🎁 가상 상자 상태:</div>
+                  <div class="flex gap-1 text-[10px] bg-[#8B4513] text-white px-2.5 py-0.5 rounded-full font-bold">
+                    총 <span id="badge-qty">0</span>개 구성 중
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 space-y-3">
+              <button id="btn-submit" onclick="submitSimOrder()" disabled class="w-full py-4 rounded-full text-sm font-bold bg-stone-200 text-stone-400 cursor-not-allowed shadow-md transition-all flex items-center justify-center gap-2">
+                <i data-lucide="message-square" class="h-4 w-4"></i>
+                <span>주문 양식 복사 & 바로 예약</span>
+              </button>
+              <p class="text-[10px] text-[#4A3728]/50 text-center leading-relaxed">
+                ※ 버튼 동작 즉시 '카톡 양식 전용 인쇄문' 형태로 클립보드에 무사히 문장이 저장됩니다.
+              </p>
+            </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ 자주 묻는 질문 -->
-  <section id="faq" class="py-16 sm:py-24 max-w-4xl mx-auto px-6">
-    <div class="text-center max-w-xl mx-auto mb-16">
-      <span class="text-xs font-bold text-[#8B4513] tracking-widest uppercase font-serif">Customer Care</span>
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#4A3728] mt-2 mb-4">자주 묻는 질문</h2>
-      <p class="text-xs sm:text-sm text-[#4A3728]/85">달콤공방 이용과 관련된 궁금증에 정성스레 미리 전합니다.</p>
-    </div>
-
-    <!-- FAQ Accordion Grid -->
-    <div class="space-y-4">
-      <div class="bg-white rounded-[24px] border border-[#F0E6D6] overflow-hidden shadow-sm hover:border-[#8B4513] transition-all">
-        <button onclick="toggleFaq(1)" class="w-full text-left p-5 sm:p-6 flex justify-between items-center transition-colors hover:bg-stone-50/50">
-          <span class="font-serif font-bold text-sm sm:text-base text-[#4A3728]">쿠키 보존 기한과 보관 팁은 어떻게 하나요?</span>
-          <span id="arr-1" class="text-xs text-[#8B4513] transition-transform duration-300">▼</span>
-        </button>
-        <div id="ans-1" class="faq-answer">
-          <div class="p-5 sm:p-6 pt-0 border-t border-[#F0E6D6]/30 text-xs sm:text-sm text-[#4A3728]/80 leading-relaxed bg-[#FDFBF7]/50">
-            당사는 방부제와 보존 첨가물 전면 배제 원칙에 의거해 만듭니다. 실온 보관 시 그늘진 서늘한 구역 기준 최대 3일, 장기 보존 원하실 경우 밀폐 후 냉동하시면 약 2주간 원형 유지가 보장되며 자연해동으로 신선히 부활합니다.
-          </div>
-        </div>
+    <!-- FAQ Accordion Dropdown -->
+    <section id="faq" class="py-16 sm:py-24 max-w-4xl mx-auto px-6">
+      <div class="text-center max-w-xl mx-auto mb-16">
+        <span class="text-xs font-bold text-[#8B4513] tracking-widest uppercase font-serif">Customer Care</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#4A3728] mt-2 mb-4">자주 묻는 질문</h2>
+        <p class="text-xs sm:text-sm text-[#4A3728]/85">달콤공방 수제쿠키 보관 팁 및 배송 시스템에 관한 고객 지원 가이드라인입니다.</p>
       </div>
 
-      <div class="bg-white rounded-[24px] border border-[#F0E6D6] overflow-hidden shadow-sm hover:border-[#8B4513] transition-all">
-        <button onclick="toggleFaq(2)" class="w-full text-left p-5 sm:p-6 flex justify-between items-center transition-colors hover:bg-stone-50/50">
-          <span class="font-serif font-bold text-sm sm:text-base text-[#4A3728]">답례품 등 단체 주문도 일정이 맞나요?</span>
-          <span id="arr-2" class="text-xs text-[#8B4513] transition-transform duration-300">▼</span>
-        </button>
-        <div id="ans-2" class="faq-answer">
-          <div class="p-5 sm:p-6 pt-0 border-t border-[#F0E6D6]/30 text-xs sm:text-sm text-[#4A3728]/80 leading-relaxed bg-[#FDFBF7]/50">
-            네 그렇습니다. 결혼 답례품, 기관 소모임, 유치원 선물 등의 거대 수송용 오더를 위해 별도로 스티커 레터링 일러스트와 끈 리본 포맷 커스텀이 구비되어 있습니다. 원활한 차질배치를 위해 최소 5일 전 채용 상담창을 통해 자율 협약이 권장됩니다.
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-[24px] border border-[#F0E6D6] overflow-hidden shadow-sm hover:border-[#8B4513] transition-all">
-        <button onclick="toggleFaq(3)" class="w-full text-left p-5 sm:p-6 flex justify-between items-center transition-colors hover:bg-stone-50/50">
-          <span class="font-serif font-bold text-sm sm:text-base text-[#4A3728]">택배 포장 도중에 쿠키 파손은 없나요?</span>
-          <span id="arr-3" class="text-xs text-[#8B4513] transition-transform duration-300">▼</span>
-        </button>
-        <div id="ans-3" class="faq-answer">
-          <div class="p-5 sm:p-6 pt-0 border-t border-[#F0E6D6]/30 text-xs sm:text-sm text-[#4A3728]/80 leading-relaxed bg-[#FDFBF7]/50">
-            우체국 안심 특송라인과 계약을 맺고 운영 중입니다. 포장 시 수분 차단 비닐백에 투입한 다음 크라프트 케이스에 안착하고, 외부에 촘촘히 2번 에어 버블 백(뽁뽁이) 충돌 완화 장벽을 둘러 박스 내포물을 빈틈없이 압착 포장하여 고유 원형이 유지되도록 철통 수송합니다.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 가벼운 CTA 격려 밴드 -->
-  <section class="bg-[#8B4513] text-white py-12 px-6 text-center">
-    <div class="max-w-2xl mx-auto">
-      <span class="text-3xl block mb-3">🍯✨</span>
-      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-3">소중한 인연에 전하는 따사로운 한 박스</h3>
-      <p class="text-xs sm:text-sm text-gray-200/90 leading-relaxed font-light mb-6">
-        정교하고 깊어질 수 있도록 당일 즉각 구운 정성을 엄선해 담습니다. 고마운 얼굴에 번질 가벼운 미소를 기대합니다.
-      </p>
-      <a 
-        href="#giftbox"
-        class="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-[#8B4513] font-bold text-xs rounded-full shadow hover:bg-amber-100 transition-colors"
-      >
-        <span>지금 바로 주문 조합 하러 가기</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- 푸터 하단 고정 정보 구역 (연락처, 운영시간, 오시는길, 인스타) -->
-  <footer id="footer" class="bg-[#F0E6D6] text-[#4A3728] pt-16 pb-8 px-6 border-t border-[#E0D5C1]">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-      
-      <!-- Brand Bio -->
       <div class="space-y-4">
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-full bg-[#8B4513] flex items-center justify-center text-white text-sm font-bold">
-            🍪
+        <!-- FAQ item 1 -->
+        <div class="bg-white rounded-[24px] border border-[#F0E6D6] overflow-hidden shadow-sm hover:border-[#8B4513] transition-all">
+          <button onclick="toggleFAQ(0)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between focus:outline-none">
+            <span class="font-serif font-bold text-sm sm:text-base text-[#4A3728]">쿠키는 수령 후 실온에서 며칠 동안 보관 가능한가요?</span>
+            <span id="faq-icon-0" class="w-5 h-5 flex items-center justify-center text-[#8B4513] transition-transform duration-300">▼</span>
+          </button>
+          <div id="faq-ans-0" class="max-h-0 overflow-hidden transition-all duration-300">
+            <div class="p-5 sm:p-6 pt-0 border-t border-[#F0E6D6]/30 text-xs sm:text-sm text-[#4A3728]/80 leading-relaxed bg-[#FDFBF7]/50">
+              달콤공방 수제 쿠키는 방부제를 함유하지 않으므로, 수령 직후 햇빛이 들지 않는 건조하고 서늘한 실온에서 최대 3일간 보관하실 것을 권장합니다. 그보다 길게 두실 경우 즉시 밀봉하여 냉동 보관(최대 3주)하신 뒤, 실온에서 20분 자가 해동하시거나 에어프라이어 160도에 3분간 데우시면 방금 구운 듯한 최상의 고소 촉촉함이 고스란히 복구됩니다.
+            </div>
           </div>
-          <span class="font-serif font-bold text-lg text-[#4A3728]">달콤공방</span>
         </div>
-        <p class="text-xs leading-relaxed font-light text-[#4A3728]/80 max-w-sm">
-          국가인증 유기농 원당과 뉴질랜드 발효 버터를 조합해 소박한 온기를 오프라인 및 택배로 전달하는 서계동 수제 구움쿠키 마스터 스튜디오입니다.
+
+        <!-- FAQ item 2 -->
+        <div class="bg-white rounded-[24px] border border-[#F0E6D6] overflow-hidden shadow-sm hover:border-[#8B4513] transition-all">
+          <button onclick="toggleFAQ(1)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between focus:outline-none">
+            <span class="font-serif font-bold text-sm sm:text-base text-[#4A3728]">단체 회사 간식이나 결혼식 답례품 대량 구매 문의 방법은 어떻게 되나요?</span>
+            <span id="faq-icon-1" class="w-5 h-5 flex items-center justify-center text-[#8B4513] transition-transform duration-300">▼</span>
+          </button>
+          <div id="faq-ans-1" class="max-h-0 overflow-hidden transition-all duration-300">
+            <div class="p-5 sm:p-6 pt-0 border-t border-[#F0E6D6]/30 text-xs sm:text-sm text-[#4A3728]/80 leading-relaxed bg-[#FDFBF7]/50">
+              기업 워크샵, 답례품, 하객 조공 등의 대량 주문(30박스/개 이상)은 최소 수령 예정일 기준 일주일 전 카카오톡 채널 또는 고객센터 서면 대표 전화를 통해 1:1 디저트 마스터 매칭 맞춤 상담이 가능합니다. 이 경우 원하시는 일러스트 스티커 디자인에 맞춘 전용 커스텀 무상 제작을 부착해 드리고 있으며, 일정 금액 이상 시 서울 전 지역은 공방 전용 퀵 직행 배송이 제공됩니다.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ item 3 -->
+        <div class="bg-white rounded-[24px] border border-[#F0E6D6] overflow-hidden shadow-sm hover:border-[#8B4513] transition-all">
+          <button onclick="toggleFAQ(2)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between focus:outline-none">
+            <span class="font-serif font-bold text-sm sm:text-base text-[#4A3728]">정기 휴일인 일요일과 월요일에도 대량 단체 수령은 할 수 없나요?</span>
+            <span id="faq-icon-2" class="w-5 h-5 flex items-center justify-center text-[#8B4513] transition-transform duration-300">▼</span>
+          </button>
+          <div id="faq-ans-2" class="max-h-0 overflow-hidden transition-all duration-300">
+            <div class="p-5 sm:p-6 pt-0 border-t border-[#F0E6D6]/30 text-xs sm:text-sm text-[#4A3728]/80 leading-relaxed bg-[#FDFBF7]/50">
+              매장 문을 열지 않는 일요일과 월요일은 대외 오프라인 소매 판매는 쉬어 가지만, 사전 조율 예약된 단체 대량 주문(답례 패키지 등) 건에 한해서는 휴일 정상 화덕 전용 공방 가동 및 전속 배클 딜리버리 제작을 별도로 원격 지원하고 있습니다. 먼저 당사의 카카오톡 '달콤공방' 서면 매칭 문의로 남겨 주시면 친절히 가이딩 일정을 협조해 드리도록 하겠습니다.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action Wave -->
+    <section class="bg-[#8B4513] text-white py-12 px-6 text-center">
+      <div class="max-w-2xl mx-auto">
+        <i data-lucide="cookie" class="h-10 w-10 mx-auto text-white/40 mb-4 animate-pulse"></i>
+        <h3 class="font-serif text-xl sm:text-2xl font-bold mb-3">소중한 분에게 전하는 완벽한 정성의 맛</h3>
+        <p class="text-xs sm:text-sm text-white/80 font-light leading-relaxed mb-6">
+          기억에 오랫동안 따뜻이 머무를 선물, 달콤한 티타임의 동반자를 직접 골라 가득 담아보세요.
         </p>
-        <div class="flex gap-4 pt-2">
-          <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded-full bg-[#FAF3EB] border border-[#E0D5C1] hover:bg-[#8B4513] hover:text-white text-[#4A3728] flex items-center justify-center transition-all text-xs" font-semibold>IG</a>
-          <a href="https://pf.kakao.com" target="_blank" class="w-8 h-8 rounded-full bg-[#FAF3EB] border border-[#E0D5C1] hover:bg-[#FEE500] hover:text-[#191919] text-[#4A3728] flex items-center justify-center transition-all text-xs" font-semibold>Talk</a>
-        </div>
-      </div>
-
-      <!-- Operational hours -->
-      <div class="space-y-4">
-        <h4 class="font-serif font-bold text-xs text-[#4A3728] uppercase tracking-wider flex items-center gap-2">
-          <span>영업 및 구움 일정</span>
-        </h4>
-        <ul class="space-y-2 text-xs font-light text-[#4A3728]/80">
-          <li>
-            <span class="font-semibold text-[#4A3728] block">화요일 ~ 토요일 (쿠키 굽는 날)</span>
-            오픈 am 11:00 ~ 마감 pm 20:00 (전량 소진 시 조기 퇴근마감 보장)
-          </li>
-          <li>
-            <span class="font-semibold text-[#8B4513] block">매주 일요일 & 월요일 정기 휴일</span>
-            *단, 팩토리급 세미나 대량 오더는 선협의 하에 휴일 제조 가능
-          </li>
-        </ul>
-      </div>
-
-      <!-- Contacts -->
-      <div class="space-y-4">
-        <h4 class="font-serif font-bold text-xs text-[#4A3728] uppercase tracking-wider flex items-center gap-2">
-          <span>실시간 소통처</span>
-        </h4>
-        <ul class="space-y-2 text-xs font-light">
-          <li class="flex gap-2">
-            <span class="font-semibold text-[#4A3728]">공방번호 :</span>
-            <a href="tel:02-1234-5678" class="hover:text-[#8B4513] transition-colors underline decoration-[#8B4513]">010-1234-5678</a>
-          </li>
-          <li class="flex gap-2">
-            <span class="font-semibold text-[#4A3728]">카카오아이디 :</span>
-            <span>달콤공방 채널검색</span>
-          </li>
-          <li class="flex gap-2">
-            <span class="font-semibold text-[#4A3728]">이메일처 :</span>
-            <span>contact@dalcom.com</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Address -->
-      <div class="space-y-4">
-        <h4 class="font-serif font-bold text-xs text-[#4A3728] uppercase tracking-wider flex items-center gap-2">
-          <span>위치 및 지도 안내</span>
-        </h4>
-        <p class="text-xs leading-relaxed text-[#4A3728]/80 font-light">
-          서울시 용산구 달콤동 123-45, 1층 달콤공방 수제 로스터리 베이크하우스<br />
-          <span class="text-[10px] text-[#4A3728]/60 mt-1 block">(※ 숙대입구역 3번 보도정지 도보 5분 거리부근 아치골목 정중앙)</span>
-        </p>
-      </div>
-
-    </div>
-
-    <div class="max-w-6xl mx-auto pt-8 border-t border-[#E0D5C1] flex flex-col sm:flex-row items-center justify-between text-[11px] font-light text-[#4A3728]/70">
-      <p>© 2026 달콤공방 Sweet Atelier. All Rights Reserved.</p>
-      <p class="mt-2 sm:mt-0 text-[#4A3728]/50">정직하고 따뜻한 디저트 문화를 전파 개혁해 나갑니다.</p>
-    </div>
-  </footer>
-
-
-  <!-- 클립보드 복사 성공 모달 -->
-  <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
-    <div class="bg-white rounded-[32px] max-w-md w-full p-6 sm:p-8 shadow-2xl border border-[#F0E6D6] text-center relative max-h-[90vh] overflow-y-auto">
-      <div class="w-16 h-16 rounded-full bg-[#F9F3EB] text-[#8B4513] flex items-center justify-center mx-auto mb-4 border border-[#F0E6D6] text-2xl">
-        ✔
-      </div>
-      
-      <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#4A3728] mb-2">주문서 복사 성공!</h3>
-      <p class="text-xs sm:text-sm text-[#4A3728]/85 leading-relaxed mb-6">
-        선택하신 크래프트 상자 속 견적 양식이<br />
-        <span class="font-semibold text-[#8B4513] bg-[#F9F3EB] px-1.5 py-0.5 rounded">고객님의 핸드폰/PC 클립보드</span>에 자동 임시 저장 설정되었습니다.<br />
-        아래 카카오톡 채널 버튼을 눌러 상담창이 나타나면 곧바로 대화창에 <strong>붙여넣기(Ctrl+V / 붙여넣기 클릭)</strong>하여 간편하게 주문 신청을 마무리해보세요!
-      </p>
-
-      <div class="p-4 rounded-2xl bg-[#FDFBF7] border border-[#F0E6D6] text-left text-xs text-[#4A3728] mb-6 space-y-2 font-mono">
-        <div class="font-bold text-[#4A3728] font-serif border-b border-[#F0E6D6] pb-1.5 mb-2">📋 임베디드 복사된 명세서 원문</div>
-        <pre id="copied-content" class="whitespace-pre-wrap max-h-[160px] overflow-y-auto leading-relaxed text-[11px]"></pre>
-      </div>
-
-      <div class="flex flex-col sm:flex-row gap-3">
-        <button
-          onclick="closeModal()"
-          class="flex-1 py-3 border border-[#F0E6D6] text-[#4A3728]/70 hover:bg-[#FDFBF7] font-medium text-xs sm:text-sm rounded-full transition-colors cursor-pointer"
-        >
-          닫기
-        </button>
-        <a
-          href="https://pf.kakao.com"
-          target="_blank"
-          class="flex-1 py-3 bg-[#FEE500] hover:bg-[#FDD800] text-[#191919] font-bold text-xs sm:text-sm rounded-full transition-colors flex items-center justify-center gap-1.5 border border-[#E9D100]"
-        >
-          <span>카카오톡 채널로 이동</span>
+        <a href="#giftbox" class="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-[#8B4513] font-bold text-xs rounded-full shadow hover:bg-amber-100 transition-colors">
+          <span>지금 바로 나만의 상자 만들기</span>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5"></i>
         </a>
       </div>
+    </section>
+
+    <!-- Footer Space -->
+    <footer id="footer" class="bg-[#F0E6D6] text-[#4A3728] pt-16 pb-8 px-6 border-t border-[#E0D5C1]">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 font-sans mb-12">
+        <div class="space-y-4">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-[#8B4513] flex items-center justify-center text-white">
+              <i data-lucide="cookie" class="h-4 w-4"></i>
+            </div>
+            <span class="font-serif font-bold text-lg text-[#4A3728]">달콤공방</span>
+          </div>
+          <p class="text-xs leading-relaxed font-light text-[#4A3728]/80 max-w-sm">
+            천연 발효 버터와 유기농 밀로 만들어 사랑을 전하는 서계동 프리미엄 구움 수제 쿠키 전문 공방입니다.
+          </p>
+          <div class="flex gap-4 pt-2">
+            <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded-full bg-[#FAF3EB] border border-[#E0D5C1] hover:bg-[#8B4513] hover:text-white text-[#4A3728] flex items-center justify-center transition-colors">
+              <i data-lucide="instagram" class="h-4 w-4"></i>
+            </a>
+            <a href="https://pf.kakao.com" target="_blank" class="w-8 h-8 rounded-full bg-[#FAF3EB] border border-[#E0D5C1] hover:bg-[#FEE500] hover:text-[#191919] text-[#4A3728] flex items-center justify-center transition-colors">
+              <i data-lucide="message-square" class="h-4 w-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-serif font-bold text-xs text-[#4A3728] uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="clock" class="h-3.5 w-3.5 text-[#8B4513]"></i>
+            <span>영업 및 운영 시간</span>
+          </h4>
+          <ul class="space-y-2 text-xs font-light text-[#4A3728]/80">
+            <li>
+              <span class="font-semibold text-[#4A3728] block">화요일 ~ 토요일 (오리지널 쿠키 굽는 날)</span>
+              am 11:00 ~ pm 20:00 (전량 조기 품절 시 조기 마감)
+            </li>
+            <li>
+              <span class="font-semibold text-[#8B4513] block">일요일 & 월요일 정기 휴무</span>
+              *단체 대량 주문 단체 발송건의 제작은 희망일 조율 가능
+            </li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-serif font-bold text-xs text-[#4A3728] uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="phone" class="h-3.5 w-3.5 text-[#8B4513]"></i>
+            <span>실시간 고객 센터</span>
+          </h4>
+          <ul class="space-y-2 text-xs font-light text-[#4A3728]/80">
+            <li>
+              <span class="font-semibold text-[#4A3728]">전화번호 :</span>
+              <a href="tel:02-1234-5678" class="hover:text-[#8B4513] transition-colors underline decoration-[#8B4513]">02-1234-5678</a>
+            </li>
+            <li>
+              <span class="font-semibold text-[#4A3728]">카카오 검색 :</span>
+              <span>ID: 달콤공방</span>
+            </li>
+            <li>
+              <span class="font-semibold text-[#4A3728]">이메일 :</span>
+              <span>contact@dalcomgongbang.com</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-serif font-bold text-xs text-[#4A3728] uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="map-pin" class="h-3.5 w-3.5 text-[#8B4513]"></i>
+            <span>찾아오시는 길</span>
+          </h4>
+          <p class="text-xs leading-relaxed text-[#4A3728]/80 font-light">
+            서울시 용산구 청파로 123번길 45, 1층 달콤공방 수제베이커리<br />
+            <span class="text-[10px] text-[#4A3728]/60 mt-1 block">(※ 숙대입구역 3번 출구 도보 5분 거리)</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-6xl mx-auto pt-8 border-t border-[#E0D5C1] flex flex-col sm:flex-row items-center justify-between text-[11px] font-light text-[#4A3728]/70">
+        <p>© 2026 달콤공방 Sweet Atelier. All Rights Reserved.</p>
+        <p class="mt-2 sm:mt-0 text-[#4A3728]/50">정성들인 재활용 크래프트 용기와 우체국 신선 배송 시스템을 채용하고 있습니다.</p>
+      </div>
+    </footer>
+
+    <!-- Interactive Copy Confirm Modal Overlay -->
+    <div id="copy-modal" class="fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+      <div class="bg-white rounded-[32px] max-w-md w-full p-6 sm:p-8 shadow-2xl border border-[#F0E6D6] text-center relative">
+        <div class="w-16 h-16 rounded-full bg-[#F9F3EB] text-[#8B4513] flex items-center justify-center mx-auto mb-4 border border-[#F0E6D6]">
+          <i data-lucide="check" class="w-8 h-8 stroke-[3]"></i>
+        </div>
+        
+        <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#4A3728] mb-2">주문서 복사 완료!</h3>
+        <p class="text-xs sm:text-sm text-[#4A3728]/85 leading-relaxed mb-6">
+          고객님이 설계하신 전용 견적 및 내역 텍스트가<br />
+          <span class="font-semibold text-[#8B4513] bg-[#F9F3EB] px-1.5 py-0.5 rounded">클립보드에 완벽히 복사</span>되었습니다.<br />
+          카카오톡 채널 상담 점포 페이지에서 바로 대화 내용에 붙여넣기(Ctrl+V / Cmd+V) 하시면 아주 빠르고 정확한 논스톱 일괄 예약 주문이 마쳐집니다.
+        </p>
+
+        <!-- Preview Inside Modal -->
+        <div class="p-4 rounded-2xl bg-[#FDFBF7] border border-[#F0E6D6] text-left text-xs text-[#4A2C1C] mb-6 space-y-2 font-mono">
+          <div class="font-bold text-[#4A3728] font-serif border-b border-[#F0E6D6] pb-1.5 mb-2">📋 실시간 복사된 주문 내역서</div>
+          <div id="modal-text-preview" class="whitespace-pre-wrap max-h-[160px] overflow-y-auto leading-relaxed text-stone-600">
+            <!-- text from builder JS will hook here -->
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button onclick="closeCopyModal()" class="flex-1 py-3 border border-[#F0E6D6] text-[#4A3728]/70 hover:bg-[#FDFBF7] font-medium text-xs sm:text-sm rounded-full transition-colors cursor-pointer">
+            닫기
+          </button>
+          <a href="https://pf.kakao.com" target="_blank" onclick="closeCopyModal()" class="flex-1 py-3 bg-[#FEE500] hover:bg-[#FDD800] text-[#191919] font-bold text-xs sm:text-sm rounded-full transition-all flex items-center justify-center gap-1.5 border border-[#E9D100]">
+            <i data-lucide="message-square" class="h-4 w-4"></i>
+            <span>카카오톡 채널 이동</span>
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
 
+    <!-- Client-Side Vanilla JS Interactive Calculations & UI States -->
+    <script>
+      // 1. Initial State Definition
+      const products = {
+        choco: { name: '더블 초코칩 쿠키', price: 3800 },
+        matcha: { name: '제주 말차 화이트 쿠키', price: 4200 },
+        caramel: { name: '단짠 솔티드 카라멜 쿠키', price: 4000 }
+      };
 
-  <!-- 인터랙티브 계산용 순수 바닐라 스크립트 엔진 -->
-  <script>
-    // 상태 정의
-    const cart = {
-      choco: 0,
-      matcha: 0,
-      caramel: 0
-    };
+      const cart = {
+        choco: 0,
+        matcha: 0,
+        caramel: 0
+      };
 
-    const prices = {
-      choco: 3800,
-      matcha: 4200,
-      caramel: 4000
-    };
+      let packaging = 'gift'; // 'basic' | 'gift'
+      let shipping = 'courier'; // 'pickup' | 'courier'
 
-    const names = {
-      choco: '더블 초코칩 쿠키',
-      matcha: '제주 말차 화이트 쿠키',
-      caramel: '단짠 솔티드 카라멜 쿠키'
-    };
-
-    let packaging = 'basic'; // 'basic' | 'gift'
-    let shipping = 'courier'; // 'pickup' | 'courier'
-
-    // 쿠키 단독 추가 버튼
-    function addCookie(type) {
-      cart[type]++;
-      // 계산기 영역으로 화면 이동 유도
-      const element = document.getElementById("giftbox");
-      element.scrollIntoView({ behavior: 'smooth' });
-      render();
-    }
-
-    // 마이너 플래스 수량 변경
-    function changeQty(type, amount) {
-      cart[type] = Math.max(0, cart[type] + amount);
-      render();
-    }
-
-    // 포장 업데이트
-    function setPackaging(type) {
-      packaging = type;
-      
-      const btnBasic = document.getElementById('pack-basic');
-      const btnGift = document.getElementById('pack-gift');
-
-      if (type === 'basic') {
-        btnBasic.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#8B4513] bg-[#F9F3EB]";
-        btnGift.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#F0E6D6] hover:border-[#8B4513]";
-      } else {
-        btnBasic.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#F0E6D6] hover:border-[#8B4513]";
-        btnGift.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#8B4513] bg-[#F9F3EB]";
+      // 2. Change Item Qty Logic
+      function changeQty(id, delta) {
+        cart[id] = Math.max(0, cart[id] + delta);
+        document.getElementById(`qty-${id}`).innerText = cart[id];
+        updateSimulation();
       }
-      render();
-    }
 
-    // 배송 선택 업데이트
-    function setShipping(type) {
-      shipping = type;
-
-      const btnPickup = document.getElementById('ship-pickup');
-      const btnCourier = document.getElementById('ship-courier');
-
-      if (type === 'pickup') {
-        btnPickup.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#8B4513] bg-[#F9F3EB]";
-        btnCourier.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#F0E6D6] hover:border-[#8B4513]";
-      } else {
-        btnPickup.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#F0E6D6] hover:border-[#8B4513]";
-        btnCourier.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#8B4513] bg-[#F9F3EB]";
+      // Add to simulation from individual card buttons
+      function addToSim(id) {
+        changeQty(id, 1);
+        // Smooth scroll focus down to the simulator
+        document.getElementById('giftbox').scrollIntoView({ behavior: 'smooth' });
       }
-      render();
-    }
 
-    // 통계 및 렌더링 동적 핸들러
-    function render() {
-      // 숫자 세그먼트 주입
-      document.getElementById('qty-choco').innerText = cart.choco;
-      document.getElementById('qty-matcha').innerText = cart.matcha;
-      document.getElementById('qty-caramel').innerText = cart.caramel;
+      // 3. Set Packaging Option
+      function setPackOption(option) {
+        packaging = option;
+        
+        const basicBtn = document.getElementById('pack-basic');
+        const giftBtn = document.getElementById('pack-gift');
+        
+        if (option === 'basic') {
+          basicBtn.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#8B4513] bg-[#F9F3EB]";
+          basicBtn.firstElementChild.innerHTML = `
+            <i data-lucide="check" class="h-3.5 w-3.5 text-[#8B4513] inline mr-1"></i>기본 종이백 포장 (무료)
+          `;
+          
+          giftBtn.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#F0E6D6] hover:border-[#8B4513]";
+          giftBtn.firstElementChild.innerHTML = "프리미엄 크래프트 박스 (+1,000원)";
+        } else {
+          giftBtn.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#8B4513] bg-[#F9F3EB]";
+          giftBtn.firstElementChild.innerHTML = `
+            <i data-lucide="check" class="h-3.5 w-3.5 text-[#8B4513] inline mr-1"></i>프리미엄 크래프트 박스 (+1,000원)
+          `;
+          
+          basicBtn.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#F0E6D6] hover:border-[#8B4513]";
+          basicBtn.firstElementChild.innerHTML = "기본 종이백 포장 (무료)";
+        }
+        lucide.createIcons();
+        updateSimulation();
+      }
 
-      const totalQty = cart.choco + cart.matcha + cart.caramel;
-      const emptyState = document.getElementById('empty-state');
-      const invoiceBill = document.getElementById('invoice-bill');
-      const orderBtn = document.getElementById('order-btn');
+      // 4. Set Shipping Option
+      function setShipOption(option) {
+        shipping = option;
+        
+        const pickupBtn = document.getElementById('ship-pickup');
+        const courierBtn = document.getElementById('ship-courier');
+        
+        if (option === 'pickup') {
+          pickupBtn.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#8B4513] bg-[#F9F3EB]";
+          pickupBtn.firstElementChild.innerHTML = `
+            <i data-lucide="check" class="h-3.5 w-3.5 text-[#8B4513] inline mr-1"></i>달콤공방 매장 직접 픽업 (무료)
+          `;
+          
+          courierBtn.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#F0E6D6] hover:border-[#8B4513]";
+          courierBtn.firstElementChild.innerHTML = "신선 우체국 안심택배 (+3,500원)";
+        } else {
+          courierBtn.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#8B4513] bg-[#F9F3EB]";
+          courierBtn.firstElementChild.innerHTML = `
+            <i data-lucide="check" class="h-3.5 w-3.5 text-[#8B4513] inline mr-1"></i>신선 우체국 안심택배 (+3,500원)
+          `;
+          
+          pickupBtn.className = "p-4 rounded-2xl border-2 text-left transition-all flex flex-col cursor-pointer border-[#F0E6D6] hover:border-[#8B4513]";
+          pickupBtn.firstElementChild.innerHTML = "달콤공방 매장 직접 픽업 (무료)";
+        }
+        lucide.createIcons();
+        updateSimulation();
+      }
 
-      if (totalQty === 0) {
-        emptyState.style.display = 'block';
-        invoiceBill.style.display = 'none';
-        orderBtn.disabled = true;
-        orderBtn.className = "w-full py-4 bg-stone-200 text-stone-400 cursor-not-allowed rounded-full text-sm font-bold shadow-md transition-all flex items-center justify-center gap-2 outline-none";
-      } else {
-        emptyState.style.display = 'none';
-        invoiceBill.style.display = 'block';
-        orderBtn.disabled = false;
-        orderBtn.className = "w-full py-4 bg-[#8B4513] hover:bg-[#6F4E37] text-white cursor-pointer rounded-full text-sm font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 outline-none";
-
-        // 빌 목록 그리기
-        const billItems = document.getElementById('bill-items');
-        billItems.innerHTML = '';
-
+      // 5. Update UI Calculations
+      function updateSimulation() {
+        const totalItems = cart.choco + cart.matcha + cart.caramel;
+        
+        const emptyEl = document.getElementById('calc-empty');
+        const filledEl = document.getElementById('calc-filled');
+        const btnSubmit = document.getElementById('btn-submit');
+        
+        if (totalItems === 0) {
+          emptyEl.classList.remove('hidden');
+          filledEl.classList.add('hidden');
+          btnSubmit.disabled = true;
+          btnSubmit.className = "w-full py-4 rounded-full text-sm font-bold bg-stone-200 text-stone-400 cursor-not-allowed shadow-md transition-all flex items-center justify-center gap-2";
+          return;
+        }
+        
+        emptyEl.classList.add('hidden');
+        filledEl.classList.remove('hidden');
+        btnSubmit.disabled = false;
+        btnSubmit.className = "w-full py-4 rounded-full text-sm font-bold bg-[#8B4513] hover:bg-[#6F4E37] text-white cursor-pointer hover:shadow-lg shadow-md transition-all flex items-center justify-center gap-2";
+        
+        // Populate invoice lines
+        let itemsHtml = '';
         let subtotal = 0;
-        for (const type of ['choco', 'matcha', 'caramel']) {
-          if (cart[type] > 0) {
-            const itemCost = cart[type] * prices[type];
-            subtotal += itemCost;
-            billItems.innerHTML += `
-              <div class="flex justify-between items-center">
-                <span>${names[type]} × ${cart[type]}</span>
-                <span class="font-semibold">${itemCost.toLocaleString()}원</span>
+        
+        for (const [key, qty] of Object.entries(cart)) {
+          if (qty > 0) {
+            const cost = products[key].price * qty;
+            subtotal += cost;
+            itemsHtml += `
+              <div class="flex justify-between items-center py-1">
+                <span>${products[key].name} (x${qty})</span>
+                <span class="font-mono">${cost.toLocaleString()}원</span>
               </div>
             `;
           }
         }
-
-        const packPrice = packaging === 'gift' ? 1000 : 0;
-        const shipPrice = shipping === 'courier' ? 3500 : 0;
-        const finalPrice = subtotal + packPrice + shipPrice;
-
-        document.getElementById('bill-subtotal').innerText = subtotal.toLocaleString() + '원';
-        document.getElementById('bill-pack').innerText = packPrice === 0 ? '무료' : `+${packPrice.toLocaleString()}원`;
-        document.getElementById('bill-shipping').innerText = shipPrice === 0 ? '무료 (직접방문)' : `+${shipPrice.toLocaleString()}원`;
-        document.getElementById('bill-total').innerText = finalPrice.toLocaleString() + '원';
-        document.getElementById('total-badge').innerText = `총 ${totalQty}개`;
+        
+        document.getElementById('invoice-items').innerHTML = itemsHtml;
+        document.getElementById('price-subtotal').innerText = `${subtotal.toLocaleString()}원`;
+        
+        const packCharge = packaging === 'gift' ? 1000 : 0;
+        document.getElementById('price-pack').innerText = packCharge === 0 ? '무료 (종이포장)' : `+${packCharge.toLocaleString()}원`;
+        
+        const shipCharge = shipping === 'courier' ? 3500 : 0;
+        document.getElementById('price-ship').innerText = shipCharge === 0 ? '무료 (매장픽업)' : `+${shipCharge.toLocaleString()}원`;
+        
+        const finalPrice = subtotal + packCharge + shipCharge;
+        document.getElementById('price-total').innerText = `${finalPrice.toLocaleString()}원`;
+        document.getElementById('badge-qty').innerText = totalItems;
       }
-    }
 
-    // 클립보드용 전송 텍스트 생성
-    function getOrderText() {
-      const lines = [
-        `[달콤공방 수제쿠키 주문서]`,
-        `━━━━━━━━━━━━━━━━━━━━`
-      ];
+      // 6. Generate order string template for kakaotalk clipboard
+      function composeClipboardText() {
+        const divider = "━━━━━━━━━━━━━━━━━━━━";
+        let text = `[달콤공방 수제쿠키 주문서]\n${divider}\n`;
+        
+        for (const [key, qty] of Object.entries(cart)) {
+          if (qty > 0) {
+            const cost = products[key].price * qty;
+            text += `• ${products[key].name} : ${qty}개 (${cost.toLocaleString()}원)\n`;
+          }
+        }
+        
+        text += `${divider}\n`;
+        text += `• 포장 선택: ${packaging === 'gift' ? '선물용 크래프트 상자 (+1,000원)' : '기본 개별 종이 포장 (무료)'}\n`;
+        text += `• 수령 방법: ${shipping === 'courier' ? '택배 안심 우체국 정기배송 (+3,500원)' : '달콤공방 매장 직접 픽업 (무료)'}\n`;
+        text += `${divider}\n`;
+        
+        let subtotal = 0;
+        for (const [key, qty] of Object.entries(cart)) {
+          subtotal += products[key].price * qty;
+        }
+        const packCharge = packaging === 'gift' ? 1000 : 0;
+        const shipCharge = shipping === 'courier' ? 3500 : 0;
+        const finalPrice = subtotal + packCharge + shipCharge;
+        
+        text += `• 최종 예상 합계 결제금: ${finalPrice.toLocaleString()}원\n\n`;
+        text += `* 주문인 성함: \n`;
+        text += `* 연락처: \n`;
+        
+        if (shipping === 'courier') {
+          text += `* 받으시는 정밀 주소: \n`;
+        } else {
+          text += `* 희망 매장 방문 일시: \n`;
+        }
+        return text;
+      }
 
-      for (const type of ['choco', 'matcha', 'caramel']) {
-        if (cart[type] > 0) {
-          lines.push(`• ${names[type]} : ${cart[type]}개 (${(cart[type] * prices[type]).toLocaleString()}원)`);
+      // 7. Click action Submit with beautiful popup confirmation
+      function submitSimOrder() {
+        const orderText = composeClipboardText();
+        
+        // Write to clipboard browser window service falling back nicely if denied or iframe logic
+        navigator.clipboard.writeText(orderText).then(() => {
+          openCopyModal(orderText);
+        }).catch(() => {
+          // Fallback if browser security rules blocks direct auto clipboard API
+          const el = document.createElement('textarea');
+          el.value = orderText;
+          document.body.appendChild(el);
+          el.select();
+          document.execCommand('copy');
+          document.body.removeChild(el);
+          openCopyModal(orderText);
+        });
+      }
+
+      function openCopyModal(text) {
+        document.getElementById('modal-text-preview').innerText = text;
+        document.getElementById('copy-modal').classList.remove('hidden');
+      }
+
+      function closeCopyModal() {
+        document.getElementById('copy-modal').classList.add('hidden');
+      }
+
+      // 8. FAQ Accordion toggle helpers
+      const openFAQStates = { 0: false, 1: false, 2: false };
+      function toggleFAQ(idx) {
+        const ansEl = document.getElementById(`faq-ans-${idx}`);
+        const iconEl = document.getElementById(`faq-icon-${idx}`);
+        
+        openFAQStates[idx] = !openFAQStates[idx];
+        
+        if (openFAQStates[idx]) {
+          ansEl.style.maxHeight = ansEl.scrollHeight + "px";
+          iconEl.style.transform = "rotate(180deg)";
+        } else {
+          ansEl.style.maxHeight = "0px";
+          iconEl.style.transform = "rotate(0deg)";
         }
       }
 
-      let subtotal = 0;
-      for (const type of ['choco', 'matcha', 'caramel']) {
-        subtotal += cart[type] * prices[type];
-      }
-      const packPrice = packaging === 'gift' ? 1000 : 0;
-      const shipPrice = shipping === 'courier' ? 3500 : 0;
-      const total = subtotal + packPrice + shipPrice;
-
-      lines.push(`━━━━━━━━━━━━━━━━━━━━`);
-      lines.push(`• 포장 형태 : ${packaging === 'gift' ? '프리미엄 크래프트 박스 (+1,000원)' : '기본 종이백 포장 (무료)'}`);
-      lines.push(`• 수령 수단 : ${shipping === 'courier' ? '우체국 안심택배 (+3,500원)' : '매장 직접 픽업 (무료)'}`);
-      lines.push(`━━━━━━━━━━━━━━━━━━━━`);
-      lines.push(`• 총 최종 결제예정액 : ${total.toLocaleString()}원`);
-      lines.push(``);
-      lines.push(`* 주문 수신 성명: `);
-      lines.push(`* 연락처: `);
-      if (shipping === 'courier') {
-        lines.push(`* 배송지 주소: `);
-      } else {
-        lines.push(`* 공방 직접 방문 일시: `);
-      }
-      lines.push(`* 기타 요청 사항: `);
-
-      return lines.join('\n');
-    }
-
-    // 전송서 복사 및 모달 기동
-    function copyAndShowModal() {
-      const text = getOrderText();
-      
-      // 클립보드에 문자 복사 API 진행
-      navigator.clipboard.writeText(text).then(() => {
-        document.getElementById('copied-content').innerText = text;
-        document.getElementById('success-modal').classList.remove('hidden');
-      }).catch(err => {
-        alert("클립보드 저장 실패, 텍스트를 직접 카피해주세요!");
-      });
-    }
-
-    function closeModal() {
-      document.getElementById('success-modal').classList.add('hidden');
-    }
-
-    // FAQ 아코디언 인터랙션 토글
-    function toggleFaq(id) {
-      const ans = document.getElementById(`ans-${id}`);
-      const arr = document.getElementById(`arr-${id}`);
-
-      if (ans.classList.contains('open')) {
-        ans.classList.remove('open');
-        ans.style.maxHeight = '0px';
-        arr.style.transform = 'rotate(0deg)';
-      } else {
-        ans.classList.add('open');
-        ans.style.maxHeight = ans.scrollHeight + 'px';
-        arr.style.transform = 'rotate(180deg)';
-      }
-    }
-  </script>
-</body>
+      // 9. Render Lucide icons initially
+      lucide.createIcons();
+    </script>
+  </body>
 </html>
